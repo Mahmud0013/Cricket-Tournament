@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cricket Tournament App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cricket Tournament Manager</h1>
+
+    <!-- Tournament Form -->
+    <section>
+      <h2>Add Tournament</h2>
+      <form id="tournamentForm">
+        <input type="text" id="tournamentName" placeholder="Tournament Name" required>
+        <input type="date" id="startDate" required>
+        <input type="date" id="endDate" required>
+        <button type="submit">Add Tournament</button>
+      </form>
+      <ul id="tournamentList"></ul>
+    </section>
+
+    <!-- Team Form -->
+    <section>
+      <h2>Add Team</h2>
+      <form id="teamForm">
+        <select id="teamTournament" required></select>
+        <input type="text" id="teamName" placeholder="Team Name" required>
+        <input type="text" id="teamLocation" placeholder="Location" required>
+        <button type="submit">Add Team</button>
+      </form>
+      <ul id="teamList"></ul>
+    </section>
+
+    <!-- Player Form -->
+    <section>
+      <h2>Add Player</h2>
+      <form id="playerForm">
+        <select id="playerTeam" required></select>
+        <input type="text" id="playerName" placeholder="Player Name" required>
+        <input type="date" id="dob" required>
+        <select id="battingStyle" required>
+          <option value="Right-hand">Right-hand</option>
+          <option value="Left-hand">Left-hand</option>
+        </select>
+        <select id="bowlingStyle" required>
+          <option value="Right-arm">Right-arm</option>
+          <option value="Left-arm">Left-arm</option>
+          <option value="None">None</option>
+        </select>
+        <button type="submit">Add Player</button>
+      </form>
+      <ul id="playerList"></ul>
+    </section>
+
+    <!-- Match Form -->
+    <section>
+      <h2>Add Match</h2>
+      <form id="matchForm">
+        <select id="matchTournament" required></select>
+        <input type="date" id="matchDate" required>
+        <input type="text" id="venue" placeholder="Venue" required>
+        <select id="team1" required></select>
+        <input type="number" id="team1Runs" placeholder="Team 1 Runs" required>
+        <input type="number" id="team1Wickets" placeholder="Team 1 Wickets" required>
+        <select id="team2" required></select>
+        <input type="number" id="team2Runs" placeholder="Team 2 Runs" required>
+        <input type="number" id="team2Wickets" placeholder="Team 2 Wickets" required>
+        <button type="submit">Add Match</button>
+      </form>
+      <ul id="matchList"></ul>
+    </section>
+
+    <!-- Player Innings Form -->
+    <section>
+      <h2>Add Player Innings</h2>
+      <form id="inningsForm">
+        <select id="inningsMatch" required></select>
+        <select id="inningsPlayer" required></select>
+        <input type="number" id="playerRuns" placeholder="Runs Scored" required>
+        <input type="number" id="ballsFaced" placeholder="Balls Faced" required>
+        <input type="number" id="playerWickets" placeholder="Wickets Taken" required>
+        <button type="submit">Add Innings</button>
+      </form>
+      <ul id="inningsList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
